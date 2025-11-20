@@ -1,0 +1,13 @@
+public class EventFactory {
+
+    public Event createWorkEvent(int time, int duration, String title, String description, String location){
+        //Create event
+        return new WorkEvent(time, duration, title, description, location);
+    }
+
+    public void clearEvent(Event event) {
+        //Get time from event, if it is there, clear that space on the calendar for that duration
+        int timeToClear = event.getTime();
+    }
+
+}
