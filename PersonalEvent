@@ -1,0 +1,71 @@
+public class PersonalEvent implements Event{
+
+    private int time;
+    private int duration;
+    private String title;
+    private String description;
+    private String location;
+
+    public PersonalEvent(int time, int duration, String title, String description, String location){
+        this.time = time;
+        this.duration = duration;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+    }
+
+    @Override
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    @Override
+    public int getTime() {
+        return time;
+    }
+
+    @Override
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    @Override
+    public int getDuration() {
+        return duration;
+    }
+
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    @Override
+    public String getLocation() {
+        return location;
+    }
+
+    @Override
+    public String toString(){
+        return ("Title: " + title + "\nStart time: " + time + "\nDuration: " + duration + "\nDescription: " + description + "\nLocation: " + location);
+    }
+}
