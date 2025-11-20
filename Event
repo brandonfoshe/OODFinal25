@@ -1,0 +1,12 @@
+public interface Event {
+    void setTime(int time);
+    int getTime(); //Time measured from 0000 (Midnight) to 2359 (11:59 PM)
+    void setDuration(int duration); //Measured in minutes to the nearest 15 minute segment
+    int getDuration();
+    void setTitle(String title);
+    String getTitle();
+    void setDescription(String description);
+    String getDescription();
+    void setLocation(String location);
+    String getLocation();
+}
