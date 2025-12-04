@@ -1,18 +1,22 @@
 public class EventFactory {
-
-    public Event createWorkEvent(int time, int duration, String title, String description, String location){
-        //Create Work event
-        return new WorkEvent(time, duration, title, description, location);
-    }
-    
-    public Event createPersonalEvent(int time, int duration, String title, String description, String location){
-        //Create Personal event
-        return new PersonalEvent(time, duration, title, description, location);
+    public Event createWorkEvent(EventBuilder builder){
+        WorkEvent workEvent = new WorkEvent();
+        buildEvent(workEvent, builder);
+        workEvent.setCompany(builder.getCompany());
+        return workEvent;
     }
 
-    public void clearEvent(Event event) {
-        //Get time from event, if it is there, clear that space on the calendar for that duration
-        int timeToClear = event.getTime();
+    public Event createPersonalEvent(EventBuilder builder){
+        PersonalEvent personalEvent = new PersonalEvent();
+        buildEvent(personalEvent, builder);
+        return personalEvent;
     }
 
+    public void buildEvent(Event event, EventBuilder builder){
+        event.setTime(builder.getTime());
+        event.setDuration(builder.getDuration());
+        event.setTitle(builder.getTitle());
+        event.setDescription(builder.getDescription());
+        event.setLocation(builder.getLocation());
+    }
 }
