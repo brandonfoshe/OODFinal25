@@ -18,5 +18,6 @@ public class EventFactory {
         event.setTitle(builder.getTitle());
         event.setDescription(builder.getDescription());
         event.setLocation(builder.getLocation());
+        event.setDay(builder.getDay());
     }
 }
