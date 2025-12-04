@@ -68,6 +68,7 @@ public abstract class AbstractEvent implements Event{
 
     @Override
     public String toString(){
-        return ("Title: " + title + "\nStart time: " + time + "\nDuration: " + duration + "\nDescription: " + description + "\nLocation: " + location);
+        return ("Title: " + title + "\nStart time: " + time + "\nDuration: " + duration +
+                "\nDescription: " + description + "\nLocation: " + location + "\nDay: " + day);
     }
 }
