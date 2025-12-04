@@ -9,4 +9,6 @@ public interface Event {
     String getDescription();
     void setLocation(String location);
     String getLocation();
+    void setDay(int day);
+    int getDay();
 }
