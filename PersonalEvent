@@ -1,3 +1,7 @@
-public class PersonalEvent extends AbstractEvent{
+public class PersonalEvent extends Event {
+
+    public PersonalEvent(int time, int duration, String title, String description, String location, int day) {
+        super(time, duration, title, description, location, day);
+    }
 
 }
