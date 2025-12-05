@@ -1,0 +1,19 @@
+public class Test {
+    public static void main(String[] args){
+        EventBuilder eb = new EventBuilder();
+        eb.setTitle("Company (tm) opening");
+        eb.setTime(1100);
+        eb.setDuration(90);
+        eb.setDescription("Big company opening");
+        eb.setLocation("Big company land");
+        eb.setDay(3);
+        eb.setCompany("Microsoft");
+
+        EventFactory ef = new EventFactory();
+        Event workEvent = ef.createWorkEvent(eb);
+        Event personalEvent = ef.createPersonalEvent(eb);
+
+        System.out.println("Work Event: \n" + workEvent);
+        System.out.println("\n\nPersonal Event: \n" + personalEvent);
+    }
+}
