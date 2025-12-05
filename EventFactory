@@ -1,23 +1,9 @@
 public class EventFactory {
     public Event createWorkEvent(EventBuilder builder){
-        WorkEvent workEvent = new WorkEvent();
-        buildEvent(workEvent, builder);
-        workEvent.setCompany(builder.getCompany());
-        return workEvent;
+        return builder.buildWorkEvent();
     }
 
     public Event createPersonalEvent(EventBuilder builder){
-        PersonalEvent personalEvent = new PersonalEvent();
-        buildEvent(personalEvent, builder);
-        return personalEvent;
-    }
-
-    public void buildEvent(Event event, EventBuilder builder){
-        event.setTime(builder.getTime());
-        event.setDuration(builder.getDuration());
-        event.setTitle(builder.getTitle());
-        event.setDescription(builder.getDescription());
-        event.setLocation(builder.getLocation());
-        event.setDay(builder.getDay());
+        return builder.buildPersonalEvent();
     }
 }
