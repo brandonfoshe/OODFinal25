@@ -1,4 +1,8 @@
 public abstract class Event {
+
+    //HEADER:
+    //Abstract event class, all events will have these basic variables, but can be extended to include more variables
+
     private final int time;
     private final int duration;
     private final String title;
@@ -6,6 +10,7 @@ public abstract class Event {
     private final String location;
     private final int day;
 
+    //Basic super constructor
     public Event(int time, int duration, String title, String description, String location, int day){
         this.time= time;
         this.duration = duration;
@@ -15,6 +20,7 @@ public abstract class Event {
         this.day = day;
     }
 
+    //Shows the details of the event when printed
     @Override
     public String toString(){
         return ("Title: " + title + "\nStart time: " + time + "\nDuration: " + duration +
