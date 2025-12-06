@@ -1,8 +1,14 @@
 public class EventFactory {
+
+    //HEADER:
+    //Factory declares which type of event will be built using which builder
+
+    //Create work event
     public Event createWorkEvent(EventBuilder builder){
         return builder.buildWorkEvent();
     }
 
+    //Create personal event
     public Event createPersonalEvent(EventBuilder builder){
         return builder.buildPersonalEvent();
     }
