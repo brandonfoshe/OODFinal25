@@ -20,4 +20,5 @@ Deltion of Events
 Indivdual Displays of Events given a Day of the Week
 A large Week-Long Display
   -A simulated Week with Notification for the Given Email
-## 
+## Additional StackBlitz
+Additonally here is the Vite Link to view the UI and Functional Element https://stackblitz.com/edit/vitejs-vite-duzb3wkt?file=README.md
