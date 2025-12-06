@@ -1,4 +1,8 @@
 public class EventBuilder {
+
+    //HEADER:
+    //Builder with functions to build each type of event
+
     private int time;
     private int duration;
     private String title;
@@ -7,6 +11,8 @@ public class EventBuilder {
     private String company;
     private int day;
 
+
+    //Setters for each element of the calendar
     public void setTime(int time){
         this.time = time;
     }
@@ -35,10 +41,12 @@ public class EventBuilder {
         this.day = day;
     }
 
+    //Build a work event, which takes in an additional company variable
     public WorkEvent buildWorkEvent(){
         return new WorkEvent(time, duration, title, description, location, company, day);
     }
 
+    //Build a personal event, which takes the basic variables
     public PersonalEvent buildPersonalEvent(){
         return new PersonalEvent(time, duration, title, description, location, day);
     }
