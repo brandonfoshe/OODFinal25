@@ -1,6 +1,11 @@
 public class WorkEvent extends Event {
     private final String company;
 
+    //HEADER:
+    //Work event class, calls the super for constructor and adds company to it. toString is also changed to show company
+
+    //Work Event, unlike Personal, adds a variable - Company
+
     public WorkEvent(int time, int duration, String title, String description, String location, String company, int day) {
         super(time, duration, title, description, location, day);
         this.company = company;
